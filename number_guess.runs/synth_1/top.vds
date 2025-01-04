@@ -1,0 +1,508 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Sat Jan 04 09:30:52 2025
+# Process ID: 24988
+# Current directory: D:/vivado/number_guess/number_guess.runs/synth_1
+# Command line: vivado.exe -log top.vds -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: D:/vivado/number_guess/number_guess.runs/synth_1/top.vds
+# Journal file: D:/vivado/number_guess/number_guess.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 11788 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 305.426 ; gain = 98.969
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [D:/vivado/number_guess/number_guess.srcs/sources_1/new/top.v:23]
+	Parameter IDLE bound to: 3'b000 
+	Parameter START_GAME bound to: 3'b001 
+	Parameter WAIT_INPUT bound to: 3'b010 
+	Parameter CHECK_RESULT bound to: 3'b011 
+	Parameter TIMEOUT bound to: 3'b100 
+	Parameter WIN bound to: 3'b101 
+	Parameter time_limit bound to: 30 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'mp3_player' [D:/vivado/number_guess/number_guess.srcs/sources_1/new/MP3.v:23]
+	Parameter IDLE bound to: 3'b000 
+	Parameter PLAY_MP3 bound to: 3'b001 
+	Parameter WAIT_LRC bound to: 3'b010 
+	Parameter END_PLAY bound to: 3'b100 
+INFO: [Synth 8-256] done synthesizing module 'mp3_player' (1#1) [D:/vivado/number_guess/number_guess.srcs/sources_1/new/MP3.v:23]
+INFO: [Synth 8-638] synthesizing module 'ps2_keyboard' [D:/vivado/number_guess/number_guess.srcs/sources_1/new/ps2_keyboard.v:23]
+	Parameter IDLE bound to: 2'b00 
+	Parameter RECEIVE bound to: 2'b01 
+	Parameter PROCESS bound to: 2'b10 
+INFO: [Synth 8-256] done synthesizing module 'ps2_keyboard' (2#1) [D:/vivado/number_guess/number_guess.srcs/sources_1/new/ps2_keyboard.v:23]
+INFO: [Synth 8-638] synthesizing module 'clk_timer' [D:/vivado/number_guess/number_guess.srcs/sources_1/new/clk_divider.v:23]
+	Parameter TIME_LIMIT bound to: 30 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clk_timer' (3#1) [D:/vivado/number_guess/number_guess.srcs/sources_1/new/clk_divider.v:23]
+INFO: [Synth 8-638] synthesizing module 'seven_seg_mux' [D:/vivado/number_guess/number_guess.srcs/sources_1/new/mux_7seg.v:22]
+INFO: [Synth 8-256] done synthesizing module 'seven_seg_mux' (4#1) [D:/vivado/number_guess/number_guess.srcs/sources_1/new/mux_7seg.v:22]
+INFO: [Synth 8-638] synthesizing module 'random_number_generator' [D:/vivado/number_guess/number_guess.srcs/sources_1/new/random_number_generator.v:22]
+	Parameter A bound to: 1664525 - type: integer 
+	Parameter C bound to: 1013904223 - type: integer 
+	Parameter M bound to: 64'b0000000000000000000000000000000100000000000000000000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'random_number_generator' (5#1) [D:/vivado/number_guess/number_guess.srcs/sources_1/new/random_number_generator.v:22]
+WARNING: [Synth 8-5788] Register play_sound_reg in module top is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/vivado/number_guess/number_guess.srcs/sources_1/new/top.v:202]
+WARNING: [Synth 8-5788] Register sound_code_reg in module top is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/vivado/number_guess/number_guess.srcs/sources_1/new/top.v:209]
+WARNING: [Synth 8-3848] Net mp3_start_play in module/entity top does not have driver. [D:/vivado/number_guess/number_guess.srcs/sources_1/new/top.v:61]
+WARNING: [Synth 8-3848] Net mp3_spi_miso in module/entity top does not have driver. [D:/vivado/number_guess/number_guess.srcs/sources_1/new/top.v:62]
+INFO: [Synth 8-256] done synthesizing module 'top' (6#1) [D:/vivado/number_guess/number_guess.srcs/sources_1/new/top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 342.809 ; gain = 136.352
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin mp3_inst:start_play to constant 0 [D:/vivado/number_guess/number_guess.srcs/sources_1/new/top.v:71]
+WARNING: [Synth 8-3295] tying undriven pin mp3_inst:spi_miso to constant 0 [D:/vivado/number_guess/number_guess.srcs/sources_1/new/top.v:71]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 342.809 ; gain = 136.352
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/vivado/number_guess/number_guess.srcs/constrs_1/new/clk.xdc]
+Finished Parsing XDC File [D:/vivado/number_guess/number_guess.srcs/constrs_1/new/clk.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/vivado/number_guess/number_guess.srcs/constrs_1/new/clk.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/vivado/number_guess/number_guess.srcs/constrs_1/new/display7.xdc]
+Finished Parsing XDC File [D:/vivado/number_guess/number_guess.srcs/constrs_1/new/display7.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/vivado/number_guess/number_guess.srcs/constrs_1/new/display7.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 642.172 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:24 . Memory (MB): peak = 642.172 ; gain = 435.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:24 . Memory (MB): peak = 642.172 ; gain = 435.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:24 . Memory (MB): peak = 642.172 ; gain = 435.715
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'mp3_player'
+INFO: [Synth 8-5544] ROM "spi_mosi" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "input_confirmed" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "input_confirmed" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "clk_enable" won't be mapped to RAM because address size (27) is larger than maximum supported(25)
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'top'
+INFO: [Synth 8-5544] ROM "play_sound" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "play_sound" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                              000
+                PLAY_MP3 |                               01 |                              001
+                WAIT_LRC |                               10 |                              010
+                END_PLAY |                               11 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'mp3_player'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 |                              000
+              START_GAME |                              001 |                              001
+              WAIT_INPUT |                              010 |                              010
+            CHECK_RESULT |                              011 |                              011
+                     WIN |                              100 |                              101
+                 TIMEOUT |                              101 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'top'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:25 . Memory (MB): peak = 642.172 ; gain = 435.715
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     27 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               27 Bit    Registers := 1     
+	               10 Bit    Registers := 12    
+	                8 Bit    Registers := 3     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 16    
++---Multipliers : 
+	                21x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     27 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   6 Input      8 Bit        Muxes := 1     
+	  12 Input      7 Bit        Muxes := 3     
+	  11 Input      7 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	  11 Input      3 Bit        Muxes := 1     
+	   7 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 2     
+	  13 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+	   4 Input      1 Bit        Muxes := 8     
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module top 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	  11 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module mp3_player 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   7 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module ps2_keyboard 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 12    
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	  13 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 1     
+Module clk_timer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     27 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               27 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     27 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module seven_seg_mux 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      8 Bit        Muxes := 1     
+	  12 Input      7 Bit        Muxes := 3     
+	  11 Input      7 Bit        Muxes := 2     
+Module random_number_generator 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
++---Multipliers : 
+	                21x32  Multipliers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:25 . Memory (MB): peak = 642.172 ; gain = 435.715
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'u_ps2_keyboard/input_buffer_reg[9:0]' into 'u_ps2_keyboard/input_buffer_reg[9:0]' [D:/vivado/number_guess/number_guess.srcs/sources_1/new/ps2_keyboard.v:98]
+INFO: [Synth 8-4471] merging register 'u_ps2_keyboard/input_buffer_reg[9:0]' into 'u_ps2_keyboard/input_buffer_reg[9:0]' [D:/vivado/number_guess/number_guess.srcs/sources_1/new/ps2_keyboard.v:98]
+INFO: [Synth 8-4471] merging register 'u_ps2_keyboard/input_buffer_reg[9:0]' into 'u_ps2_keyboard/input_buffer_reg[9:0]' [D:/vivado/number_guess/number_guess.srcs/sources_1/new/ps2_keyboard.v:98]
+INFO: [Synth 8-4471] merging register 'u_ps2_keyboard/input_buffer_reg[9:0]' into 'u_ps2_keyboard/input_buffer_reg[9:0]' [D:/vivado/number_guess/number_guess.srcs/sources_1/new/ps2_keyboard.v:98]
+INFO: [Synth 8-4471] merging register 'u_ps2_keyboard/input_buffer_reg[9:0]' into 'u_ps2_keyboard/input_buffer_reg[9:0]' [D:/vivado/number_guess/number_guess.srcs/sources_1/new/ps2_keyboard.v:98]
+INFO: [Synth 8-4471] merging register 'u_ps2_keyboard/input_buffer_reg[9:0]' into 'u_ps2_keyboard/input_buffer_reg[9:0]' [D:/vivado/number_guess/number_guess.srcs/sources_1/new/ps2_keyboard.v:98]
+INFO: [Synth 8-4471] merging register 'u_ps2_keyboard/input_buffer_reg[9:0]' into 'u_ps2_keyboard/input_buffer_reg[9:0]' [D:/vivado/number_guess/number_guess.srcs/sources_1/new/ps2_keyboard.v:98]
+INFO: [Synth 8-4471] merging register 'u_ps2_keyboard/input_buffer_reg[9:0]' into 'u_ps2_keyboard/input_buffer_reg[9:0]' [D:/vivado/number_guess/number_guess.srcs/sources_1/new/ps2_keyboard.v:98]
+INFO: [Synth 8-4471] merging register 'u_ps2_keyboard/input_buffer_reg[9:0]' into 'u_ps2_keyboard/input_buffer_reg[9:0]' [D:/vivado/number_guess/number_guess.srcs/sources_1/new/ps2_keyboard.v:98]
+INFO: [Synth 8-4471] merging register 'u_ps2_keyboard/input_buffer_reg[9:0]' into 'u_ps2_keyboard/input_buffer_reg[9:0]' [D:/vivado/number_guess/number_guess.srcs/sources_1/new/ps2_keyboard.v:98]
+INFO: [Synth 8-5546] ROM "u_ps2_keyboard/input_confirmed" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "u_clk_timer/clk_enable" won't be mapped to RAM because address size (27) is larger than maximum supported(25)
+DSP Report: Generating DSP rng_inst/seed1, operation Mode is: (A:0x19660d)*B.
+DSP Report: operator rng_inst/seed1 is absorbed into DSP rng_inst/seed1.
+DSP Report: operator rng_inst/seed1 is absorbed into DSP rng_inst/seed1.
+DSP Report: Generating DSP rng_inst/seed1, operation Mode is: (PCIN>>17)+(A:0x19660d)*B.
+DSP Report: operator rng_inst/seed1 is absorbed into DSP rng_inst/seed1.
+DSP Report: operator rng_inst/seed1 is absorbed into DSP rng_inst/seed1.
+WARNING: [Synth 8-3917] design top has port an[7] driven by constant 1
+WARNING: [Synth 8-3917] design top has port an[6] driven by constant 1
+WARNING: [Synth 8-3917] design top has port an[3] driven by constant 1
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 642.172 ; gain = 435.715
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 642.172 ; gain = 435.715
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+---------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping               | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+---------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|top         | (A:0x19660d)*B            | 22     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | (PCIN>>17)+(A:0x19660d)*B | 22     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+---------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (rng_inst/seed_reg[31]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (rng_inst/seed_reg[30]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (rng_inst/seed_reg[29]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (rng_inst/seed_reg[28]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (rng_inst/seed_reg[27]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (rng_inst/seed_reg[26]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (rng_inst/seed_reg[25]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (rng_inst/seed_reg[24]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (rng_inst/seed_reg[23]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (rng_inst/seed_reg[22]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (rng_inst/seed_reg[21]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (rng_inst/seed_reg[20]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (rng_inst/seed_reg[19]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (rng_inst/seed_reg[18]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (rng_inst/seed_reg[17]) is unused and will be removed from module top.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:30 . Memory (MB): peak = 642.172 ; gain = 435.715
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:30 . Memory (MB): peak = 642.172 ; gain = 435.715
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:54 . Memory (MB): peak = 662.266 ; gain = 455.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:54 . Memory (MB): peak = 662.266 ; gain = 455.809
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:54 . Memory (MB): peak = 692.500 ; gain = 486.043
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:28 ; elapsed = 00:00:54 . Memory (MB): peak = 692.500 ; gain = 486.043
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:28 ; elapsed = 00:00:54 . Memory (MB): peak = 692.500 ; gain = 486.043
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:55 . Memory (MB): peak = 692.500 ; gain = 486.043
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:55 . Memory (MB): peak = 692.500 ; gain = 486.043
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:55 . Memory (MB): peak = 692.500 ; gain = 486.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:55 . Memory (MB): peak = 692.500 ; gain = 486.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:55 . Memory (MB): peak = 692.500 ; gain = 486.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:55 . Memory (MB): peak = 692.500 ; gain = 486.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |    49|
+|3     |DSP48E1 |     1|
+|4     |LUT1    |    77|
+|5     |LUT2    |    99|
+|6     |LUT3    |    51|
+|7     |LUT4    |    42|
+|8     |LUT5    |    53|
+|9     |LUT6    |   123|
+|10    |MUXF7   |     3|
+|11    |FDCE    |    70|
+|12    |FDPE    |    18|
+|13    |FDRE    |    47|
+|14    |IBUF    |     6|
+|15    |OBUF    |    18|
++------+--------+------+
+
+Report Instance Areas: 
++------+------------------+------------------------+------+
+|      |Instance          |Module                  |Cells |
++------+------------------+------------------------+------+
+|1     |top               |                        |   658|
+|2     |  mp3_inst        |mp3_player              |     6|
+|3     |  rng_inst        |random_number_generator |   122|
+|4     |  u_clk_timer     |clk_timer               |   154|
+|5     |  u_ps2_keyboard  |ps2_keyboard            |   242|
+|6     |  u_seven_seg_mux |seven_seg_mux           |    65|
++------+------------------+------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:55 . Memory (MB): peak = 692.500 ; gain = 486.043
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 18 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:42 . Memory (MB): peak = 692.500 ; gain = 165.730
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:56 . Memory (MB): peak = 692.500 ; gain = 486.043
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 56 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+50 Infos, 24 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:53 . Memory (MB): peak = 692.500 ; gain = 468.668
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 692.500 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Jan 04 09:31:51 2025...
